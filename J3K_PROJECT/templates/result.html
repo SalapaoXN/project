@@ -6,6 +6,7 @@
     <title>{{ restaurant }} Menu</title>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Londrina+Sketch&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Mitr:wght@200;300;400;500;600;700&display=swap');
 
         body {
             margin: 0;
@@ -19,6 +20,10 @@
 
         .result-div {
             text-align: center;
+            padding: 10px 15px;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: #fff;
         }
 
         .result-div-head {
@@ -27,6 +32,7 @@
             font-weight: 400;
             font-style: normal;
             margin: 10px auto;
+            color: #70C247;
         }
 
         .result-div-restaurant {
@@ -45,18 +51,31 @@
             margin-bottom: 20px;
         }
 
+        .thai {
+            font-family: "Mitr", sans-serif;
+            font-weight: 300;
+            font-style: normal;
+        }
+
         a {
-            color: red;
+            color: #fff;
+            margin-bottom: 20px;
+            padding: 3px 5px;
+            background-color: #FF8A8A;
+            border-radius: 10px;
             text-decoration: none;
+            font-family: "Mitr", sans-serif;
+            font-weight: 200;
+            font-style: normal;
         }
     </style>
 </head>
 <body>
     <div class='result-div'>
         <p class='result-div-head'>LUCKY!!</p>
-        <p class='result-div-restaurant'>ร้าน{{restaurant}}</p>
-        <p class='result-div-food'>เมนู {{food}}</p>
-        <p class='result-div-cost'>ราคา {{price}} บาท</p>
+        <p class='result-div-restaurant thai'>ร้าน{{restaurant}}</p>
+        <p class='result-div-food thai'>เมนู {{food}}</p>
+        <p class='result-div-cost thai'>ราคา {{price}} บาท</p>
         <a href="/">Back to Search</a>
     </div>
 </body>
