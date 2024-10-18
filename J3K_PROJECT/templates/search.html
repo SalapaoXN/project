@@ -97,14 +97,10 @@
 
         <form>
             <label>available restaurant :</label>
-            <select class='select-op' size='1'>
-                <option>โคเจ</option>
-                <option>ป้าวิไล</option>
-                <option>ครัวสิริ</option>
-                <option>ริว</option>
-                <option>บูน</option>
-                <option>วาสนา</option>
-                <option>ครัวพี่ช้าง</option>
+            <select id='selectvalue' class='select-op' size='1'>
+                {% for rest in dropdown %}
+                    <option value="{{rest}}">{{rest}}</option>
+                {% endfor %}
             </select>
           </form>
     </div>

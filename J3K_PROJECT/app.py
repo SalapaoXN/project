@@ -97,11 +97,13 @@ food_list = {
         ("มาม่าผัด","45"),
         ("ผัดซีอิ๊ว","45"),
         ("สุกี้","45"),
-    ],
+    ]
 }
 
 @app.route('/', methods=['POST', 'GET'])
 def search() :
+    dropdown = [key for key in food_list]
+    
     if request.method == "POST" :
         name = request.form['restaurant'].strip()
         
@@ -112,7 +114,7 @@ def search() :
         else :
             return render_template('search.html', error = "Restaurant not found!")
     
-    return render_template('search.html')
+    return render_template('search.html', dropdown = dropdown)
 
 @app.route('/result/<restaurant>')
 def result(restaurant) :
